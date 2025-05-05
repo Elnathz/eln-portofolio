@@ -1,10 +1,12 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
 @theme {
     --font-Montserrat : "Montserrat";
-}
-
-h1 {
-    @apply text-3xl;
+    --font-Inter : "Inter";
+    --font-Quicksand : "Quicksand";
+    --color-eln-1 : #FFFDF6;
+    --color-eln-2 : #F5F5DC;
+    --color-eln-3 : #DDEB9D;
+    --color-eln-4 : #2c4f2e;
+    --color-eln-yellow : #FFA500;
 }
