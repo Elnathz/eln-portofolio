@@ -3,36 +3,36 @@
 import { motion } from "framer-motion";
 import { Monitor, Smartphone, Palette, Code2 } from "lucide-react";
 
-const services = [
+const skills = [
   {
     icon: Monitor,
-    title: "Web App Design",
+    title: "Web Development",
     description:
-      "Creating modern, responsive web applications with stunning UI/UX that engage users.",
+      "Creating modern, responsive web applications with React, Next.js, and modern tooling.",
   },
   {
     icon: Smartphone,
-    title: "Mobile App Design",
+    title: "Mobile Development",
     description:
-      "Designing intuitive mobile experiences for both Android and iOS platforms.",
+      "Exploring mobile app development to bring ideas into the hands of users.",
   },
   {
     icon: Palette,
     title: "UI/UX Design",
     description:
-      "Crafting beautiful user interfaces with focus on usability and user experience.",
+      "Crafting beautiful and intuitive user interfaces with a focus on experience.",
   },
   {
     icon: Code2,
-    title: "Full Stack Dev",
+    title: "AI & Machine Learning",
     description:
-      "Building robust, scalable full-stack applications from front to back end.",
+      "Currently learning data science, model training, and AI integration into apps.",
   },
 ];
 
-export default function ServicesSection() {
+export default function SkillsSection() {
   return (
-    <section id="services" className="bg-dark">
+    <section id="skills" className="bg-dark">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <motion.div
@@ -46,19 +46,19 @@ export default function ServicesSection() {
             What I Do
           </span>
           <h2 className="mb-4 text-3xl font-bold text-cream md:text-4xl">
-            Creative Professional Design That&apos;s
+            Passionate About Technology And
             <br />
             <span className="gradient-text">
-              oriented towards client needs
+              Building Innovative Solutions
             </span>
           </h2>
         </motion.div>
 
-        {/* Service Cards */}
+        {/* Skills Cards */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, index) => (
+          {skills.map((skill, index) => (
             <motion.div
-              key={service.title}
+              key={skill.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -70,13 +70,13 @@ export default function ServicesSection() {
 
               <div className="relative z-10">
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-sage/20 bg-sage/10 text-sage transition-all duration-300 group-hover:bg-sage group-hover:text-dark">
-                  <service.icon size={28} />
+                  <skill.icon size={28} />
                 </div>
                 <h3 className="mb-3 text-lg font-semibold text-cream">
-                  {service.title}
+                  {skill.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-cream/50">
-                  {service.description}
+                  {skill.description}
                 </p>
               </div>
             </motion.div>

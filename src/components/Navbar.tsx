@@ -5,10 +5,9 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
+  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -37,7 +36,7 @@ export default function Navbar() {
           href="#home"
           className="text-xl font-bold tracking-tight text-cream transition-colors hover:text-sage"
         >
-          Portfolio<span className="text-sage">.</span>
+          Eln<span className="text-sage">Portfolio</span>
         </a>
 
         {/* Desktop Links */}
@@ -55,7 +54,7 @@ export default function Navbar() {
             href="#contact"
             className="rounded-full border border-sage/30 bg-sage/10 px-5 py-2 text-sm font-medium text-sage transition-all duration-300 hover:bg-sage hover:text-dark"
           >
-            Hire Me
+            Contact
           </a>
         </div>
 

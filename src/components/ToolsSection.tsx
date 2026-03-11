@@ -14,20 +14,30 @@ import {
   SiGit,
   SiFlutter,
   SiPostcss,
+  SiJupyter,
+  SiLaravel,
+  SiPhp,
+  SiCplusplus,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 
 const tools = [
-  { icon: SiFigma, name: "Figma", color: "#F24E1E" },
   { icon: SiHtml5, name: "HTML5", color: "#E34F26" },
   { icon: SiCss, name: "CSS3", color: "#1572B6" },
   { icon: SiJavascript, name: "JavaScript", color: "#F7DF1E" },
   { icon: SiTypescript, name: "TypeScript", color: "#3178C6" },
+  { icon: SiPhp, name: "PHP", color: "#777BB4" },
+  { icon: FaJava, name: "Java", color: "#007396" },
+  { icon: SiCplusplus, name: "C++", color: "#00599C" },
+  { icon: SiLaravel, name: "Laravel", color: "#FF2D20" },
   { icon: SiReact, name: "React", color: "#61DAFB" },
   { icon: SiNextdotjs, name: "Next.js", color: "#ffffff" },
   { icon: SiTailwindcss, name: "Tailwind", color: "#06B6D4" },
   { icon: SiNodedotjs, name: "Node.js", color: "#339933" },
-  { icon: SiGit, name: "Git", color: "#F05032" },
   { icon: SiFlutter, name: "Flutter", color: "#02569B" },
+  { icon: SiJupyter, name: "Jupyter", color: "#F37626" },
+  { icon: SiGit, name: "Git", color: "#F05032" },
+  { icon: SiFigma, name: "Figma", color: "#F24E1E" },
   { icon: SiPostcss, name: "PostCSS", color: "#DD3A0A" },
 ];
 

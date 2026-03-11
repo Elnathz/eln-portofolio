@@ -95,8 +95,6 @@ export default function Footer() {
                 <span className="text-sm">Semarang, Jawa Tengah, Indonesia</span>
               </div>
             </div>
-
-
           </motion.div>
 
           {/* Contact Form */}
@@ -164,14 +162,14 @@ export default function Footer() {
             </button>
           </motion.form>
         </div>
+      </div>
 
-        {/* Bottom bar */}
-        <div className="mt-16 border-t border-dark-border pt-8 text-center">
-          <p className="text-xs text-cream/30">
-            © {new Date().getFullYear()} Portfolio. All rights reserved. Built
-            with Next.js & Tailwind CSS.
-          </p>
-        </div>
+      {/* Bottom bar Full Width */}
+      <div className="w-full bg-dark-card border-t border-dark-border py-4 text-center mt-10">
+        <p className="text-xs text-cream/30 mt-2">
+          © {new Date().getFullYear()} Farros Rifantiarno Ramadhani. All rights
+          reserved. Built with Next.js & Tailwind CSS.
+        </p>
       </div>
     </footer>
   );

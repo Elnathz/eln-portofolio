@@ -18,8 +18,8 @@ interface Education {
 const educationData: Education[] = [
   {
     id: 1,
-    period: "2019 - 2022",
-    institution: "SMA Negeri 1 Example",
+    period: "2021 - 2024",
+    institution: "SMA Negeri 1 Purwodadi",
     degree: "IPA / Sains",
     description:
       "Menyelesaikan pendidikan menengah atas dengan fokus pada jurusan IPA. Aktif dalam kegiatan ekstrakulikuler dan organisasi sekolah.",
@@ -28,11 +28,11 @@ const educationData: Education[] = [
   },
   {
     id: 2,
-    period: "2022 - Sekarang",
-    institution: "Universitas Example",
-    degree: "S1 Informatika",
+    period: "2024 - Sekarang",
+    institution: "Universitas Dian Nuswantoro",
+    degree: "S1 Teknik Informatika",
     description:
-      "Menempuh pendidikan sarjana di bidang Informatika. Mempelajari pengembangan web, machine learning, dan data science.",
+      "Menempuh pendidikan sarjana di bidang Teknik Informatika. Mempelajari pengembangan web, machine learning, dan data science.",
     icon: <GraduationCap size={24} />,
     status: "current",
   },
