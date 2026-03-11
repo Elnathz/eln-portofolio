@@ -42,7 +42,7 @@ const educationData: Education[] = [
 // Replace these paths with your actual photos in /public/education/
 const galleryImages = [
   { src: "/education/edu-1.jpg", alt: "Pengurus OSIS SMA Negeri 1 Purwodadi Masa Bakti 2022/2023" },
-  { src: "/education/edu-2.jpg", alt: "Pengurus Forum Osis Grobogan Masa Bakti 2023/2024" },
+  { src: "/education/edu-2.JPG", alt: "Pengurus Forum Osis Grobogan Masa Bakti 2023/2024" },
   { src: "/education/edu-3.jpg", alt: "Kegiatan Pendidikan 3" },
   { src: "/education/edu-4.jpg", alt: "Kegiatan Pendidikan 4" },
 ];
