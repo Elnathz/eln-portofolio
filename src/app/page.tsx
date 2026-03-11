@@ -1,20 +1,20 @@
 import HeroSection from "@/components/HeroSection";
+import EducationSection from "@/components/EducationSection";
 import ServicesSection from "@/components/ServicesSection";
 import StatsSection from "@/components/StatsSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import WhyHireMe from "@/components/WhyHireMe";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import AboutMe from "@/components/AboutMe";
 import ToolsSection from "@/components/ToolsSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <EducationSection />
       <ServicesSection />
       <StatsSection />
       <ProjectsSection />
-      <WhyHireMe />
-      <TestimonialsSection />
+      <AboutMe />
       <ToolsSection />
     </>
   );

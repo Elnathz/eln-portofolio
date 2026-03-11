@@ -26,6 +26,13 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 120%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -107,3 +114,4 @@ body {
 section {
   padding: 5rem 0;
 }
+

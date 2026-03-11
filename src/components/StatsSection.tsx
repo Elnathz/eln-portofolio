@@ -6,8 +6,6 @@ import { useRef, useEffect, useState } from "react";
 const stats = [
   { value: 5, suffix: "+", label: "Years Experience" },
   { value: 3, suffix: "+", label: "Projects Done" },
-  { value: 4.5, suffix: "", label: "Satisfaction Rate", isDecimal: true },
-  { value: 6, suffix: "+", label: "Clients Worldwide" },
 ];
 
 function AnimatedCounter({
@@ -55,7 +53,7 @@ export default function StatsSection() {
   return (
     <section className="bg-dark py-16">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+        <div className="mx-auto grid max-w-2xl grid-cols-2 gap-6">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -77,7 +75,6 @@ export default function StatsSection() {
                 <AnimatedCounter
                   target={stat.value}
                   suffix={stat.suffix}
-                  isDecimal={stat.isDecimal}
                 />
               </div>
               <p className="text-xs font-medium uppercase tracking-wider text-cream/40 md:text-sm">
