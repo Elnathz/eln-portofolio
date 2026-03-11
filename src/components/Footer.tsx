@@ -85,43 +85,18 @@ export default function Footer() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-sage/20 bg-sage/10">
                   <Mail size={18} className="text-sage" />
                 </div>
-                <span className="text-sm">hello@example.com</span>
+                <span className="text-sm">farrosrifantiarno32@gmail.com</span>
               </a>
-              <a
-                href="tel:+1234567890"
-                className="flex items-center gap-4 text-cream/60 transition-colors hover:text-sage"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-sage/20 bg-sage/10">
-                  <Phone size={18} className="text-sage" />
-                </div>
-                <span className="text-sm">+62 123 456 7890</span>
-              </a>
+              
               <div className="flex items-center gap-4 text-cream/60">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-sage/20 bg-sage/10">
                   <MapPin size={18} className="text-sage" />
                 </div>
-                <span className="text-sm">Indonesia</span>
+                <span className="text-sm">Semarang, Jawa Tengah, Indonesia</span>
               </div>
             </div>
 
-            {/* Social Links */}
-            <div className="mt-8 flex gap-3">
-              {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Instagram, href: "#" },
-              ].map((social, i) => (
-                <a
-                  key={i}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-dark-border bg-dark transition-all duration-300 hover:border-sage/30 hover:text-sage"
-                >
-                  <social.icon size={18} className="text-cream/50" />
-                </a>
-              ))}
-            </div>
+
           </motion.div>
 
           {/* Contact Form */}

@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown, Download } from "lucide-react";
+import Image from "next/image";
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
@@ -34,7 +36,9 @@ export default function HeroSection() {
         >
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sage/20 bg-sage/5 px-4 py-1.5">
             <span className="h-2 w-2 rounded-full bg-sage animate-pulse" />
-            
+            <span className="text-xs font-medium text-sage">
+              Available for work
+            </span>
           </div>
 
           <h2 className="mb-2 text-lg font-light text-cream/60">
@@ -78,48 +82,52 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="relative"
         >
-          <div className="relative h-72 w-72 md:h-96 md:w-96">
-            {/* Decorative ring */}
-            <div className="absolute inset-0 rounded-full border-2 border-dashed border-sage/20 animate-[spin_20s_linear_infinite]" />
-            <div className="absolute inset-3 rounded-full border border-sage/10" />
-
-            {/* Profile image placeholder */}
-            <div className="absolute inset-6 overflow-hidden rounded-full border-2 border-sage/30 bg-gradient-to-br from-sage-dark/20 to-dark">
-              <div className="flex h-full w-full items-center justify-center text-sage/30">
-                <svg
-                  width="100"
-                  height="100"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                >
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
-              </div>
-            </div>
-
-            {/* Floating badge */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-2 top-12 rounded-2xl glass px-4 py-3"
-            >
-              <span className="text-2xl font-bold text-sage">+</span>
-            </motion.div>
+          <div className="relative h-80 w-80 md:h-[600px] md:w-[550px] lg:h-[650px] lg:w-[600px]">
+            <Image 
+              src="/hero.png" 
+              alt="Farros Rifantiarno Ramadhani"
+              fill
+              priority
+              className="object-contain filter grayscale contrast-[1.10] hover:grayscale-0 transition-all duration-700"
+              sizes="(max-width: 768px) 320px, (max-width: 1024px) 550px, 600px"
+            />
           </div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      {/* Social Links on Bottom Right */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+        className="absolute bottom-10 right-10 z-20 hidden items-center gap-6 lg:flex"
       >
-        <ArrowDown size={20} className="text-sage/40" />
+        <div className="flex items-center gap-4">
+          <span className="text-sm font-semibold tracking-wider text-cream">Find Me On</span>
+          <div className="h-px w-12 bg-sage/30"></div>
+        </div>
+        
+        <div className="flex items-center gap-3">
+          {[
+            { icon: FaFacebookF, href: "https://web.facebook.com/farros.rifantiarno", name: "Facebook" },
+            { icon: FaInstagram, href: "https://www.instagram.com/frrosrift_", name: "Instagram" },
+            { icon: FaGithub, href: "https://github.com/Elnathz", name: "GitHub" },
+            { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/farros-rifantiarno-ramadhani-50840a2a9/", name: "LinkedIn" },
+          ].map((social, i) => (
+            <a
+              key={i}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.name}
+              className="group relative flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-dark-card border border-dark-border text-cream/70 transition-all duration-300 hover:-translate-y-1 hover:border-sage hover:bg-sage/10 hover:text-sage hover:shadow-[0_8px_16px_-6px_rgba(163,186,167,0.3)]"
+            >
+              <social.icon size={18} className="transition-transform duration-300 group-hover:scale-110" />
+            </a>
+          ))}
+        </div>
       </motion.div>
+
     </section>
   );
 }
