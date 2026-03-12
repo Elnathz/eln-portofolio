@@ -47,6 +47,9 @@ const experienceData: Experience[] = [
     period: "2023 - 2024",
     images: [
       { src: "/experience/fog/1.jpg", caption: "Kegiatan FOG bersama anggota" },
+      { src: "/experience/fog/2.jpg", caption: "Kegiatan FOG bersama anggota" },
+      { src: "/experience/fog/3.jpg", caption: "Kegiatan FOG bersama anggota" },
+      { src: "/experience/fog/4.jpg", caption: "Kegiatan FOG bersama anggota" },
     ],
   },
   {
