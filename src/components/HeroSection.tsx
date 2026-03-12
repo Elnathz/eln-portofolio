@@ -49,8 +49,7 @@ export default function HeroSection() {
             <span className="gradient-text">Farros</span> Rifantiarno Ramadhani
           </h1>
           <p className="mb-8 text-base leading-relaxed text-cream/50 md:text-lg">
-            A Full Stack Developer specializing in creating impactful digital
-            experiences, intuitive interfaces, and scalable solutions.
+            An Informatics Engineering student in the Excellent Class program, focusing on Full Stack Development with a keen interest in Data Science.
           </p>
 
           {/* CTA Buttons */}
@@ -66,7 +65,7 @@ export default function HeroSection() {
               />
             </a>
             <a
-              href="https://drive.google.com/file/d/1mxsBIlBn4BlxGqeNOrnhPx-LdWFXCCVi/view?usp=sharing" target="_blank"
+              href="https://drive.google.com/file/d/1MvwzCmwIoXpDuGB6tas0mz8vZoiz4mi5/view?usp=sharing" target="_blank"
               className="flex items-center gap-2 rounded-full border border-sage/30 px-7 py-3 text-sm font-semibold text-sage transition-all duration-300 hover:bg-sage/10"
             >
               <Download size={16} />

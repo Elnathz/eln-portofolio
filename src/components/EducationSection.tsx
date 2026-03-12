@@ -69,7 +69,7 @@ export default function EducationSection() {
   }, [isAutoPlaying, nextSlide]);
 
   return (
-    <section id="education" className="bg-dark-card">
+    <section id="education" className="bg-dark">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <motion.div

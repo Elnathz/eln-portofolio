@@ -168,7 +168,7 @@ export default function Footer() {
       <div className="w-full bg-dark-card border-t border-dark-border py-4 text-center mt-10">
         <p className="text-xs text-cream/30 mt-2">
           © {new Date().getFullYear()} Farros Rifantiarno Ramadhani. All rights
-          reserved. Built with Next.js & Tailwind CSS.
+          reserved.
         </p>
       </div>
     </footer>
