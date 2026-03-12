@@ -163,13 +163,13 @@ export default function EducationSection() {
 
                 {/* Paragraphs */}
                 <div className="space-y-4">
-                  <p className="text-sm leading-relaxed text-cream/60">
+                  <p className="text-sm leading-relaxed text-cream/60 text-justify">
                     Ketertarikan saya dengan dunia teknologi sudah dimulai sejak kecil — dari asyiknya bermain laptop sejak TK dan SD, hingga menyelami dunia gaming yang membuat saya penasaran: <span className="text-cream/80 font-medium">&ldquo;Bagaimana semua ini bisa dibuat?&rdquo;</span> Rasa penasaran itulah yang akhirnya membawa saya mendalami dunia IT secara serius.
                   </p>
-                  <p className="text-sm leading-relaxed text-cream/60">
+                  <p className="text-sm leading-relaxed text-cream/60 text-justify">
                     Saat ini, saya merupakan mahasiswa <span className="text-sage font-medium">Teknik Informatika kelas unggulan</span> di Universitas Dian Nuswantoro, dengan fokus pada pengembangan web dan ketertarikan kuat di bidang <span className="text-sage font-medium">Data Science</span>. Mimpi besar saya adalah membangun startup sendiri yang memiliki visi revolusioner di dunia AI — menciptakan teknologi yang benar-benar berdampak bagi banyak orang.
                   </p>
-                  <p className="text-sm leading-relaxed text-cream/60">
+                  <p className="text-sm leading-relaxed text-cream/60 text-justify">
                     Di luar dunia coding, saya menikmati waktu dengan mendengarkan musik — terutama <span className="text-cream/80 font-medium">LANY</span> yang selalu menemani hari-hari saya. Saya juga aktif berolahraga: dari boxing, gym, hingga badminton, semua menjadi cara saya menjaga keseimbangan antara pikiran dan tubuh.
                   </p>
                 </div>

@@ -25,9 +25,10 @@ const experienceData: Experience[] = [
     role: "Ketua 1 OSIS",
     period: "2022 - 2023",
     images: [
-      { src: "/experience/osis/1.jpg", caption: "Kegiatan rapat pengurus OSIS" },
-      { src: "/experience/osis/2.jpg", caption: "Pelaksanaan program kerja OSIS" },
-      { src: "/experience/osis/3.jpg", caption: "Kegiatan sosial bersama anggota OSIS" },
+      { src: "/experience/osis/1.JPG", caption: "Kegiatan rapat pengurus OSIS" },
+      { src: "/experience/osis/2.jpg", caption: "Kegiatan rapat pengurus OSIS" },
+      { src: "/experience/osis/3.JPG", caption: "Kegiatan rapat pengurus OSIS" },
+      { src: "/experience/osis/4.JPG", caption: "Kegiatan rapat pengurus OSIS" },
     ],
   },
   {
@@ -37,8 +38,6 @@ const experienceData: Experience[] = [
     period: "2023 - 2024",
     images: [
       { src: "/experience/eso/1.jpg", caption: "Kegiatan ESO bersama anggota" },
-      { src: "/experience/eso/2.jpg", caption: "Seminar teknologi ESO" },
-      { src: "/experience/eso/3.jpg", caption: "Event tahunan ESO" },
     ],
   },
   {
@@ -48,8 +47,6 @@ const experienceData: Experience[] = [
     period: "2023 - 2024",
     images: [
       { src: "/experience/fog/1.jpg", caption: "Kegiatan FOG bersama anggota" },
-      { src: "/experience/fog/2.jpg", caption: "Seminar teknologi FOGR" },
-      { src: "/experience/fog/3.jpg", caption: "Event tahunan FOGR" },
     ],
   },
   {
@@ -59,8 +56,6 @@ const experienceData: Experience[] = [
     period: "2024 - Sekarang",
     images: [
       { src: "/experience/seminar/1.jpg", caption: "Persiapan seminar nasional" },
-      { src: "/experience/seminar/2.jpg", caption: "Pelaksanaan seminar" },
-      { src: "/experience/seminar/3.jpg", caption: "Foto bersama narasumber" },
     ],
   },
   {
@@ -70,19 +65,15 @@ const experienceData: Experience[] = [
     period: "2025",
     images: [
       { src: "/experience/ppkormawa/1.jpg", caption: "Kegiatan bakti sosial" },
-      { src: "/experience/ppkormawa/2.jpg", caption: "Mengajar anak-anak" },
-      { src: "/experience/ppkormawa/3.jpg", caption: "Foto bersama tim relawan" },
     ],
   },
   {
     id: 6,
     title: "Panitia Dinus Inside 2025",
-    role: "Penanggung Jawab Pendamping",
+    role: "Penanggung Jawab Pendamping dan Koorlap",
     period: "2025",
     images: [
-      { src: "/experience/dinusinside/1.jpg", caption: "Persiapan lomba coding" },
-      { src: "/experience/dinusinside/2.jpg", caption: "Saat kompetisi berlangsung" },
-      { src: "/experience/dinusinside/3.jpg", caption: "Pengumuman hasil lomba" },
+      { src: "/experience/dinusinside/1.jpg", caption: "" },
     ],
   },
 ];
@@ -261,7 +252,7 @@ function PhotoModal({
         </div>
 
         {/* Image viewer */}
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-dark">
+        <div className="relative flex w-full items-center justify-center overflow-hidden bg-dark transition-all duration-300">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -269,14 +260,12 @@ function PhotoModal({
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -60 }}
               transition={{ duration: 0.3 }}
-              className="absolute inset-0"
+              className="relative flex w-full items-center justify-center"
             >
-              <Image
+              <img
                 src={images[current].src}
                 alt={images[current].caption}
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 750px"
+                className="h-auto w-full max-h-[70vh] object-contain"
               />
             </motion.div>
           </AnimatePresence>

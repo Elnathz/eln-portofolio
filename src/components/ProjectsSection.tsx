@@ -98,7 +98,7 @@ export default function ProjectsSection() {
             Portfolio
           </span>
           <h2 className="text-3xl font-bold text-cream md:text-4xl">
-            Latest <span className="gradient-text">Project</span>
+            My <span className="gradient-text">Projects</span>
           </h2>
         </motion.div>
 
@@ -126,66 +126,67 @@ export default function ProjectsSection() {
           </a>
         </motion.div>
 
-        {/* Project List */}
-        <div className="space-y-4">
+        {/* Project Grid */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
               onClick={() => setSelectedProject(project)}
               key={project.id}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="cursor-pointer group flex flex-col items-start justify-between gap-4 rounded-2xl border border-dark-border bg-dark-card p-6 transition-all duration-300 hover:border-sage/20 sm:flex-row sm:items-center"
+              className="group cursor-pointer"
             >
-              <div className="flex items-center gap-4 flex-1">
-                {/* Project Image or Fallback icon */}
-                {project.image_url ? (
-                  <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-dark-border bg-dark">
+              <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-dark-border bg-dark-card transition-all duration-300 hover:-translate-y-2 hover:border-sage/40 hover:shadow-xl hover:shadow-sage/5">
+                {/* Project Image */}
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-dark">
+                  {project.image_url ? (
                     <img
                       src={project.image_url}
                       alt={project.title}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                  </div>
-                ) : (
-                  <div
-                    className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${gradients[index % gradients.length]}`}
-                  >
-                    <div className="h-6 w-6 rounded-lg border border-sage/30 bg-sage/20 transition-transform duration-500 group-hover:scale-110" />
-                  </div>
-                )}
-                <div className="flex-1">
-                  <h3 className="text-base font-semibold text-cream transition-colors group-hover:text-sage">
+                  ) : (
+                    <div
+                      className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${gradients[index % gradients.length]}`}
+                    >
+                      <div className="h-12 w-12 rounded-xl border border-sage/30 bg-sage/20 transition-transform duration-500 group-hover:scale-110" />
+                    </div>
+                  )}
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent opacity-80" />
+                </div>
+
+                {/* Project Info */}
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="mb-2 text-xl font-bold text-cream transition-colors group-hover:text-sage">
                     {project.title}
                   </h3>
-                  <div className="mt-1 mb-2 flex flex-wrap gap-2">
+                  
+                  {project.description && (
+                    <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-cream/50">
+                      {project.description}
+                    </p>
+                  )}
+
+                  {/* Tags */}
+                  <div className="mt-auto flex flex-wrap gap-2">
                     {project.tags?.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-sage/10 px-2.5 py-0.5 text-xs text-sage/70"
+                        className="rounded-full border border-sage/10 bg-sage/5 px-2.5 py-1 text-xs font-medium text-sage/80"
                       >
                         {tag}
                       </span>
                     ))}
                     {project.tags && project.tags.length > 3 && (
-                      <span className="rounded-full bg-dark-border px-2.5 py-0.5 text-xs text-cream/50">
+                      <span className="flex items-center rounded-full border border-dark-border bg-dark px-2.5 py-1 text-xs font-medium text-cream/50">
                         +{project.tags.length - 3}
                       </span>
                     )}
                   </div>
-                  {project.description && (
-                    <p className="max-w-xl text-sm leading-relaxed text-cream/50 line-clamp-1">
-                      {project.description}
-                    </p>
-                  )}
                 </div>
-              </div>
-
-              <div className="flex gap-2 shrink-0">
-                <span className="flex items-center gap-1.5 rounded-full border border-dark-border px-4 py-2 text-xs font-medium text-cream/50 transition-all group-hover:border-sage/20 group-hover:text-sage">
-                  View Details
-                </span>
               </div>
             </motion.div>
           ))}

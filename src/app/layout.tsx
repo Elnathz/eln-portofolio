@@ -31,7 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jakarta.variable} ${jakarta.className} antialiased`}>
+      <body
+        className={`${jakarta.variable} ${jakarta.className} antialiased`}
+        suppressHydrationWarning
+      >
         <Navbar />
         <main>{children}</main>
         <Footer />
