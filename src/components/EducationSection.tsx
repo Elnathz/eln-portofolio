@@ -1,9 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, School, ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
+import { GraduationCap, School, Gamepad2, Rocket, Music, Dumbbell } from "lucide-react";
 
 interface Education {
   id: number;
@@ -38,36 +36,13 @@ const educationData: Education[] = [
   },
 ];
 
-// Placeholder images for the auto-slide gallery
-// Replace these paths with your actual photos in /public/education/
-const galleryImages = [
-  { src: "/education/edu-1.jpg", alt: "Pengurus OSIS SMA Negeri 1 Purwodadi Masa Bakti 2022/2023" },
-  { src: "/education/edu-2.JPG", alt: "Pengurus Forum Osis Grobogan Masa Bakti 2023/2024" },
-  { src: "/education/edu-3.jpg", alt: "Kegiatan Pendidikan 3" },
-  { src: "/education/edu-4.jpg", alt: "Kegiatan Pendidikan 4" }
+const interests = [
+  { icon: Music, label: "LANY Enthusiast" },
+  { icon: Dumbbell, label: "Boxing & Gym" },
+  { icon: Gamepad2, label: "Gaming" },
 ];
 
 export default function EducationSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
-  }, []);
-
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + galleryImages.length) % galleryImages.length
-    );
-  };
-
-  // Auto-slide every 4 seconds
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    const interval = setInterval(nextSlide, 4000);
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, nextSlide]);
-
   return (
     <section id="education" className="bg-dark">
       <div className="mx-auto max-w-7xl px-6">
@@ -165,80 +140,55 @@ export default function EducationSection() {
             </div>
           </motion.div>
 
-          {/* Right - Auto-slide Photo Gallery */}
+          {/* Right - About Me Narrative */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative lg:sticky lg:top-24"
-            onMouseEnter={() => setIsAutoPlaying(false)}
-            onMouseLeave={() => setIsAutoPlaying(true)}
           >
-            <div className="overflow-hidden rounded-3xl border border-dark-border bg-dark">
-              {/* Image container */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
-                {galleryImages.map((img, index) => (
-                  <div
-                    key={index}
-                    className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                      index === currentSlide
-                        ? "translate-x-0 opacity-100"
-                        : index < currentSlide
-                        ? "-translate-x-full opacity-0"
-                        : "translate-x-full opacity-0"
-                    }`}
-                  >
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
+            <div className="overflow-hidden rounded-3xl border border-dark-border bg-dark-card p-8 md:p-10">
+              {/* Decorative glow */}
+              <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-sage/10 blur-3xl" />
+
+              {/* Section label */}
+              <div className="relative z-10">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sage/10 text-sage">
+                    <Rocket size={20} />
                   </div>
-                ))}
+                  <h3 className="text-lg font-bold text-cream">About Me</h3>
+                </div>
 
-                {/* Gradient overlay at bottom */}
-                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-dark/80 to-transparent" />
+                {/* Paragraphs */}
+                <div className="space-y-4">
+                  <p className="text-sm leading-relaxed text-cream/60">
+                    Ketertarikan saya dengan dunia teknologi sudah dimulai sejak kecil — dari asyiknya bermain laptop sejak TK dan SD, hingga menyelami dunia gaming yang membuat saya penasaran: <span className="text-cream/80 font-medium">&ldquo;Bagaimana semua ini bisa dibuat?&rdquo;</span> Rasa penasaran itulah yang akhirnya membawa saya mendalami dunia IT secara serius.
+                  </p>
+                  <p className="text-sm leading-relaxed text-cream/60">
+                    Saat ini, saya merupakan mahasiswa <span className="text-sage font-medium">Teknik Informatika kelas unggulan</span> di Universitas Dian Nuswantoro, dengan fokus pada pengembangan web dan ketertarikan kuat di bidang <span className="text-sage font-medium">Data Science</span>. Mimpi besar saya adalah membangun startup sendiri yang memiliki visi revolusioner di dunia AI — menciptakan teknologi yang benar-benar berdampak bagi banyak orang.
+                  </p>
+                  <p className="text-sm leading-relaxed text-cream/60">
+                    Di luar dunia coding, saya menikmati waktu dengan mendengarkan musik — terutama <span className="text-cream/80 font-medium">LANY</span> yang selalu menemani hari-hari saya. Saya juga aktif berolahraga: dari boxing, gym, hingga badminton, semua menjadi cara saya menjaga keseimbangan antara pikiran dan tubuh.
+                  </p>
+                </div>
 
-                {/* Navigation arrows */}
-                <button
-                  onClick={prevSlide}
-                  className="absolute left-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-dark/60 text-cream/80 backdrop-blur-sm transition-all hover:bg-dark/80 hover:text-sage"
-                  aria-label="Previous photo"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="absolute right-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-dark/60 text-cream/80 backdrop-blur-sm transition-all hover:bg-dark/80 hover:text-sage"
-                  aria-label="Next photo"
-                >
-                  <ChevronRight size={20} />
-                </button>
-              </div>
-
-              {/* Bottom bar with caption and numeric counter */}
-              <div className="flex items-center justify-between px-6 py-4">
-                <p className="line-clamp-1 flex-1 pr-4 text-sm text-cream/50">
-                  {galleryImages[currentSlide].alt}
-                </p>
-                
-                {/* Numeric Pagination Indicator (better for >5 images) */}
-                <div className="flex shrink-0 items-center justify-center rounded-full bg-sage/10 px-3 py-1 ring-1 ring-sage/30">
-                  <span className="text-xs font-semibold tracking-wider text-sage">
-                    {currentSlide + 1} / {galleryImages.length}
-                  </span>
+                {/* Interest tags */}
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {interests.map((item) => (
+                    <div
+                      key={item.label}
+                      className="flex items-center gap-2 rounded-full border border-sage/20 bg-sage/5 px-4 py-2 transition-all duration-300 hover:border-sage/40 hover:bg-sage/10"
+                    >
+                      <item.icon size={14} className="text-sage" />
+                      <span className="text-xs font-medium text-cream/70">
+                        {item.label}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
-
-            {/* Decorative label */}
-            <div className="mt-4 text-center">
-              <p className="text-xs text-cream/30">
-                Hover untuk pause &bull; Klik panah untuk navigasi
-              </p>
             </div>
           </motion.div>
         </div>

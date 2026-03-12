@@ -79,16 +79,19 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="relative"
+          className="group relative mt-16 flex h-full items-center justify-center md:mt-20 md:translate-x-12 lg:translate-x-24"
         >
-          <div className="relative h-80 w-80 md:h-[600px] md:w-[550px] lg:h-[650px] lg:w-[600px]">
+          {/* Glow backdrop behind the image */}
+          <div className="absolute left-1/2 top-1/2 z-0 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 animate-pulse-ring rounded-full bg-gradient-to-br from-sage/40 to-sage-dark/20 blur-[80px] transition-all duration-700 group-hover:h-[350px] group-hover:w-[350px] md:h-[500px] md:w-[500px] md:group-hover:h-[550px] md:group-hover:w-[550px] lg:h-[600px] lg:w-[600px] lg:group-hover:h-[650px] lg:group-hover:w-[650px]" />
+          
+          <div className="relative z-10 h-[400px] w-[400px] md:h-[700px] md:w-[600px] lg:h-[800px] lg:w-[700px]">
             <Image 
-              src="/hero.png" 
+              src="/heros.png" 
               alt="Farros Rifantiarno Ramadhani"
               fill
               priority
-              className="object-contain filter grayscale contrast-[1.10] hover:grayscale-0 transition-all duration-700"
-              sizes="(max-width: 768px) 320px, (max-width: 1024px) 550px, 600px"
+              className="object-contain drop-shadow-[-10px_10px_30px_rgba(20,20,20,0.8)] transition-all duration-700 ease-in-out group-hover:-translate-y-4 group-hover:scale-105 group-hover:drop-shadow-[-10px_20px_40px_rgba(163,186,167,0.2)]"
+              sizes="(max-width: 768px) 400px, (max-width: 1024px) 600px, 700px"
             />
           </div>
         </motion.div>
