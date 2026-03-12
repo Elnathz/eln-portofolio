@@ -36,7 +36,7 @@ export default function Navbar() {
           href="#home"
           className="text-xl font-bold tracking-tight text-cream transition-colors hover:text-sage"
         >
-          Eln<span className="text-sage">Portfolio</span>
+          Eln's<span className="text-sage">Portfolio</span>
         </a>
 
         {/* Desktop Links */}
@@ -54,7 +54,7 @@ export default function Navbar() {
             href="#contact"
             className="rounded-full border border-sage/30 bg-sage/10 px-5 py-2 text-sm font-medium text-sage transition-all duration-300 hover:bg-sage hover:text-dark"
           >
-            Contact
+            Contact Me
           </a>
         </div>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
             className="mt-2 rounded-full bg-sage/10 border border-sage/30 px-5 py-2 text-center text-sm font-medium text-sage transition-all hover:bg-sage hover:text-dark"
           >
-            Hire Me
+            Contact Me
           </a>
         </div>
       </div>

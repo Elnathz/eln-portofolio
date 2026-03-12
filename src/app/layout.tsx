@@ -11,13 +11,13 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Eln Portofolio",
+  title: "Eln's Portofolio",
   description:
     "Personal portfolio showcasing creative development and design work. Building beautiful digital experiences.",
   keywords: ["portfolio", "developer", "designer", "web development", "UI/UX"],
   authors: [{ name: "Your Name" }],
   openGraph: {
-    title: "Eln Portofolio",
+    title: "Eln's Portofolio",
     description:
       "Personal portfolio showcasing creative development and design work.",
     type: "website",

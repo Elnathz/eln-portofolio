@@ -45,6 +45,39 @@ const galleryImages = [
   { src: "/education/edu-2.JPG", alt: "Pengurus Forum Osis Grobogan Masa Bakti 2023/2024" },
   { src: "/education/edu-3.jpg", alt: "Kegiatan Pendidikan 3" },
   { src: "/education/edu-4.jpg", alt: "Kegiatan Pendidikan 4" },
+  { src: "/education/edu-5.jpg", alt: "Kegiatan Pendidikan 5" },
+  { src: "/education/edu-6.jpg", alt: "Kegiatan Pendidikan 6" },
+  { src: "/education/edu-7.jpg", alt: "Kegiatan Pendidikan 7" },
+  { src: "/education/edu-8.jpg", alt: "Kegiatan Pendidikan 8" },
+  { src: "/education/edu-9.jpg", alt: "Kegiatan Pendidikan 9" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
+  { src: "/education/edu-10.jpg", alt: "Kegiatan Pendidikan 10" },
 ];
 
 export default function EducationSection() {
@@ -219,24 +252,17 @@ export default function EducationSection() {
                 </button>
               </div>
 
-              {/* Bottom bar with dots + caption */}
+              {/* Bottom bar with caption and numeric counter */}
               <div className="flex items-center justify-between px-6 py-4">
-                <p className="text-sm text-cream/50">
+                <p className="line-clamp-1 flex-1 pr-4 text-sm text-cream/50">
                   {galleryImages[currentSlide].alt}
                 </p>
-                <div className="flex gap-2">
-                  {galleryImages.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        index === currentSlide
-                          ? "w-6 bg-sage"
-                          : "w-2 bg-cream/20 hover:bg-cream/40"
-                      }`}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
+                
+                {/* Numeric Pagination Indicator (better for >5 images) */}
+                <div className="flex shrink-0 items-center justify-center rounded-full bg-sage/10 px-3 py-1 ring-1 ring-sage/30">
+                  <span className="text-xs font-semibold tracking-wider text-sage">
+                    {currentSlide + 1} / {galleryImages.length}
+                  </span>
                 </div>
               </div>
             </div>
