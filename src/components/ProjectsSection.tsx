@@ -30,7 +30,7 @@ const projectsData: Project[] = [
     tags: ["Flutter", "Dart", "Mobile Development", "Firebase"],
     image_url: "/projects/bangkitusaha.jpeg",
     live_url: "",
-    github_url: "https://github.com/Elnathz/BangkitUsaha",
+    github_url: "https://github.com/Elnathz/BangkitUsahaFlutter",
   },
   {
     id: "2",
@@ -39,7 +39,7 @@ const projectsData: Project[] = [
     tags: ["Jupyter Notebook", "K-Means", "Streamlit", "Python"],
     image_url: "/projects/clustering.png",
     live_url: "https://clusteringgempaindonesia.streamlit.app",
-    github_url: "https://github.com/Elnathz/ClusteringGempaIndonesia",
+    github_url: "https://github.com/Elnathz/ClusteringGempa",
   },
   {
     id: "3",
