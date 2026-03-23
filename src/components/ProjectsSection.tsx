@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, X } from "lucide-react";
-import { supabase } from "@/lib/supabase";
 
 interface Project {
   id: string;
@@ -22,54 +21,41 @@ const gradients = [
   "from-sage/20 to-sage-light/20",
 ];
 
-// Fallback data when Supabase has no projects yet
-const fallbackProjects: Project[] = [
+// Hardcoded projects data
+const projectsData: Project[] = [
   {
     id: "1",
-    title: "Insurance Mobile App",
-    description: "",
-    tags: ["React Native", "Node.js", "PostgreSQL"],
-    image_url: "",
-    live_url: "#",
-    github_url: "#",
+    title: "Bangkit Usaha UMKM Marketplace",
+    description: "Aplikasi mobile marketplace untuk UMKM dengan fitur lengkap berbasis Flutter.",
+    tags: ["Flutter", "Dart", "Mobile Development", "Firebase"],
+    image_url: "/projects/bangkitusaha.jpeg",
+    live_url: "",
+    github_url: "https://github.com/Elnathz/BangkitUsaha",
   },
   {
     id: "2",
-    title: "Automobile Mobile App",
-    description: "",
-    tags: ["Flutter", "Firebase", "Dart"],
-    image_url: "",
-    live_url: "#",
-    github_url: "#",
+    title: "Clustering Gempa Indonesia",
+    description: "Clustering gempa di indonesia berdasarkan metode K-Means dengan visualisasi interaktif.",
+    tags: ["Jupyter Notebook", "K-Means", "Streamlit", "Python"],
+    image_url: "/projects/clustering.png",
+    live_url: "https://clusteringgempaindonesia.streamlit.app",
+    github_url: "https://github.com/Elnathz/ClusteringGempaIndonesia",
   },
   {
     id: "3",
-    title: "Ridemo Mobile App",
-    description: "",
-    tags: ["React Native", "Express", "MongoDB"],
-    image_url: "",
-    live_url: "#",
-    github_url: "#",
+    title: "Case Closed Web",
+    description: "Website Blog interaktif yang dibangun menggunakan framework Laravel dan MySQL.",
+    tags: ["Laravel", "MySQL", "PHP"],
+    image_url: "/projects/webblog.png",
+    live_url: "",
+    github_url: "https://github.com/Elnathz/CaseClosedWeb",
   },
 ];
 
 export default function ProjectsSection() {
-  const [projects, setProjects] = useState<Project[]>(fallbackProjects);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  useEffect(() => {
-    async function fetchProjects() {
-      const { data, error } = await supabase
-        .from("projects")
-        .select("*")
-        .order("created_at", { ascending: false });
-
-      if (!error && data && data.length > 0) {
-        setProjects(data);
-      }
-    }
-    fetchProjects();
-  }, []);
+  const projects = projectsData;
 
   // Prevent background scrolling when modal is open
   useEffect(() => {

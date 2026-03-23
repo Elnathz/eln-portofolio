@@ -11,7 +11,6 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
-import { supabase } from "@/lib/supabase";
 
 export default function Footer() {
   const [formData, setFormData] = useState({
@@ -28,19 +27,30 @@ export default function Footer() {
     setStatus("sending");
 
     try {
-      const { error } = await supabase.from("messages").insert([
-        {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "da1caf01-6ab1-47a8-8279-ffc59b61ca7d",
           name: formData.name,
           email: formData.email,
           message: formData.message,
-        },
-      ]);
+          subject: `Portfolio Contact: ${formData.name}`,
+          from_name: "Portfolio Website",
+        }),
+      });
 
-      if (error) throw error;
-
-      setStatus("sent");
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setStatus("idle"), 3000);
+      const result = await response.json();
+      if (result.success) {
+        setStatus("sent");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 3000);
+      } else {
+        throw new Error("Failed to send");
+      }
     } catch {
       setStatus("error");
       setTimeout(() => setStatus("idle"), 3000);
@@ -79,7 +89,7 @@ export default function Footer() {
             </h3>
             <div className="space-y-5">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:farrosrifantiarno32@gmail.com"
                 className="flex items-center gap-4 text-cream/60 transition-colors hover:text-sage"
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-sage/20 bg-sage/10">

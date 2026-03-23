@@ -25,7 +25,7 @@ const experienceData: Experience[] = [
     role: "Ketua 1 OSIS",
     period: "2022 - 2023",
     images: [
-      { src: "/experience/osis/1.JPG", caption: "Kegiatan rapat pengurus OSIS" },
+      { src: "/experience/osis/1.jpg", caption: "Kegiatan rapat pengurus OSIS" },
       { src: "/experience/osis/2.jpg", caption: "Kegiatan rapat pengurus OSIS" },
       { src: "/experience/osis/3.JPG", caption: "Kegiatan rapat pengurus OSIS" },
       { src: "/experience/osis/4.JPG", caption: "Kegiatan rapat pengurus OSIS" },
