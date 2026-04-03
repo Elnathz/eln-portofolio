@@ -341,17 +341,9 @@ function PhotoModal({
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all ${
-                    link.icon === "github"
-                      ? "border border-dark-border bg-dark text-cream hover:border-sage/30 hover:text-sage"
-                      : "bg-sage text-dark hover:bg-sage-light hover:shadow-lg hover:shadow-sage/20"
-                  }`}
+                  className="flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all bg-sage text-dark hover:bg-sage-light hover:shadow-lg hover:shadow-sage/20"
                 >
-                  {link.icon === "github" ? (
-                    <Github size={15} />
-                  ) : (
-                    <ExternalLink size={15} />
-                  )}
+                  <ExternalLink size={15} />
                   {link.label}
                 </a>
               ))}
