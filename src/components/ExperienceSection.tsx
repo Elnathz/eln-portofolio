@@ -67,7 +67,7 @@ const experienceData: Experience[] = [
     period: "2024 - Sekarang",
     images: [
       { src: "/experience/hmti/0.jpg", caption: "Feeds Pengurus HMTI 2025/2026" },
-      { src: "/experience/hmti/1.jpg", caption: "Feeds Pengurus HMTI 2025/2026" },
+      { src: "/experience/hmti/1.jpeg", caption: "Feeds Pengurus HMTI 2025/2026" },
       { src: "/experience/hmti/2.jpeg", caption: "Pembekalan Calon Pengurus FIK 2025" },
       { src: "/experience/hmti/3.jpeg", caption: "Pengurus HMTI day 2 Dinus Inside" },
       { src: "/experience/hmti/4.jpeg", caption: "Day 1 Pembekalan Anggota Aktif Sebagai Koor Acara" },

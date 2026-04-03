@@ -37,13 +37,10 @@ export default function HeroSection() {
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sage/20 bg-sage/5 px-4 py-1.5">
             <span className="h-2 w-2 rounded-full bg-sage animate-pulse" />
             <span className="text-xs font-medium text-sage">
-            Currently learning AI & Machine Learning
+            Currently Learning Data Science Focusing on NLP  
             </span>
           </div>
 
-          <h2 className="mb-2 text-lg font-light text-cream/60">
-            Hello Earth,
-          </h2>
           <h1 className="mb-4 text-4xl font-bold leading-tight text-cream md:text-6xl">
             I am{" "}
             <span className="gradient-text">Farros</span> Rifantiarno Ramadhani
