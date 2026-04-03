@@ -2,12 +2,19 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, ExternalLink} from "lucide-react";
 import Image from "next/image";
+
+interface ImageLink {
+  label: string;
+  url: string;
+  icon?: "external";
+}
 
 interface ExperienceImage {
   src: string;
   caption: string;
+  links?: ImageLink[];
 }
 
 interface Experience {
@@ -37,7 +44,7 @@ const experienceData: Experience[] = [
     role: "Kepala Divisi Speech",
     period: "2023 - 2024",
     images: [
-      { src: "/experience/eso/1.jpg", caption: "Kegiatan ESO bersama anggota" },
+      { src: "/experience/eso/1.jpeg", caption: "Panitia ESO CAMP 2023", links: [{ label: "Feeds ESO CAMP", url: "https://www.instagram.com/p/Cp9D0CCSzWf/", icon: "external" }] },
     ],
   },
   {
@@ -46,10 +53,11 @@ const experienceData: Experience[] = [
     role: "Anggota Desain dan Media",
     period: "2023 - 2024",
     images: [
-      { src: "/experience/fog/1.jpg", caption: "Kegiatan FOG bersama anggota" },
-      { src: "/experience/fog/2.jpg", caption: "Kegiatan FOG bersama anggota" },
-      { src: "/experience/fog/3.jpg", caption: "Kegiatan FOG bersama anggota" },
-      { src: "/experience/fog/4.jpg", caption: "Kegiatan FOG bersama anggota" },
+      { src: "/experience/fog/0.jpg", caption: "Feeds/Photo Pengurus FOG 2023/2024", links: [{ label: "Instagram FOG", url: "https://www.instagram.com/p/C52HrQKyHFr/?img_index=2", icon: "external" }] },
+      { src: "/experience/fog/1.jpg", caption: "Pengurus FOG 2023/2024" },
+      { src: "/experience/fog/2.jpg", caption: "Open Recruitment GLP 2024" },
+      { src: "/experience/fog/3.jpg", caption: "Open Recruitment GLP 2024" },
+      { src: "/experience/fog/4.jpg", caption: "Pendamping Kojago 2024" },
     ],
   },
   {
@@ -58,7 +66,17 @@ const experienceData: Experience[] = [
     role: "Anggota Bidang Litbang",
     period: "2024 - Sekarang",
     images: [
-      { src: "/experience/seminar/1.jpg", caption: "Persiapan seminar nasional" },
+      { src: "/experience/hmti/0.jpg", caption: "Feeds Pengurus HMTI 2025/2026" },
+      { src: "/experience/hmti/1.jpg", caption: "Feeds Pengurus HMTI 2025/2026" },
+      { src: "/experience/hmti/2.jpeg", caption: "Pembekalan Calon Pengurus FIK 2025" },
+      { src: "/experience/hmti/3.jpeg", caption: "Pengurus HMTI day 2 Dinus Inside" },
+      { src: "/experience/hmti/4.jpeg", caption: "Day 1 Pembekalan Anggota Aktif Sebagai Koor Acara" },
+      { src: "/experience/hmti/5.jpeg", caption: "Day 2 Pembekalan Anggota Aktif Sebagai Koor Acara" },
+      { src: "/experience/hmti/6.jpeg", caption: "Panitia KonekTI 2025(Makrab Prodi Teknik Informatika)" },
+      { src: "/experience/hmti/7.jpeg", caption: "Master of Ceremony SEMNASTI(Seminar Nasional Teknik Informatika) 2025" },
+      { src: "/experience/hmti/8.jpeg", caption: "Koor Acara ITC(IT Competition) 2026" },
+      { src: "/experience/hmti/9.jpeg", caption: "Makrab HMTI(HMTI FAMILY) 2025" },
+      { src: "/experience/hmti/10.jpg", caption: "Badan Pengurus Harian (Sekretaris) HMTI SERIES 2026" },
     ],
   },
   {
@@ -67,7 +85,8 @@ const experienceData: Experience[] = [
     role: "Anggota Divisi Pemasaran",
     period: "2025",
     images: [
-      { src: "/experience/ppkormawa/1.jpg", caption: "Kegiatan bakti sosial" },
+      { src: "/experience/ppko/1.jpg", caption: "Master of Ceremony Grand Opening Jendela Karya" },
+      { src: "/experience/ppko/2.jpeg", caption: "Kunjungan Pada Pelatihan Pengolahan Produk Susu Sapi(LALA)" },
     ],
   },
   {
@@ -76,7 +95,13 @@ const experienceData: Experience[] = [
     role: "Penanggung Jawab Pendamping dan Koorlap",
     period: "2025",
     images: [
-      { src: "/experience/dinusinside/1.jpg", caption: "" },
+      { src: "/experience/dinusinside/1.jpg", caption: "Feeds Sie Penanggung Jawab Pendamping Dinus Inside 2026", links: [{ label: "Instagram Dinus Inside", url: "https://www.instagram.com/p/DOSspx5E4Li/", icon: "external" }] },
+      { src: "/experience/dinusinside/2.jpeg", caption: "After Gladi Resik Dinus Inside 2026"},
+      { src: "/experience/dinusinside/3.jpeg", caption: "Day 1 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
+      { src: "/experience/dinusinside/4.jpeg", caption: "Day 1 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
+      { src: "/experience/dinusinside/5.jpeg", caption: "Day 2 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
+      { src: "/experience/dinusinside/6.jpeg", caption: "Day 2 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
+      { src: "/experience/dinusinside/7.jpeg", caption: "Day 3 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
     ],
   },
 ];
@@ -295,15 +320,43 @@ function PhotoModal({
         </div>
 
         {/* Caption + pagination */}
-        <div className="flex items-center justify-between border-t border-dark-border px-6 py-4">
-          <p className="line-clamp-2 flex-1 pr-4 text-sm leading-relaxed text-cream/60">
-            {images[current].caption}
-          </p>
-          <div className="flex shrink-0 items-center justify-center rounded-full bg-sage/10 px-3 py-1 ring-1 ring-sage/30">
-            <span className="text-xs font-semibold tracking-wider text-sage">
-              {current + 1} / {images.length}
-            </span>
+        <div className="border-t border-dark-border px-6 py-4">
+          <div className="flex items-center justify-between">
+            <p className="line-clamp-2 flex-1 pr-4 text-sm leading-relaxed text-cream/60">
+              {images[current].caption}
+            </p>
+            <div className="flex shrink-0 items-center justify-center rounded-full bg-sage/10 px-3 py-1 ring-1 ring-sage/30">
+              <span className="text-xs font-semibold tracking-wider text-sage">
+                {current + 1} / {images.length}
+              </span>
+            </div>
           </div>
+
+          {/* Action links (per-slide) */}
+          {images[current].links && images[current].links!.length > 0 && (
+            <div className="mt-3 flex flex-wrap gap-4 border-t border-dark-border pt-3">
+              {images[current].links!.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all ${
+                    link.icon === "github"
+                      ? "border border-dark-border bg-dark text-cream hover:border-sage/30 hover:text-sage"
+                      : "bg-sage text-dark hover:bg-sage-light hover:shadow-lg hover:shadow-sage/20"
+                  }`}
+                >
+                  {link.icon === "github" ? (
+                    <Github size={15} />
+                  ) : (
+                    <ExternalLink size={15} />
+                  )}
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </motion.div>
     </motion.div>

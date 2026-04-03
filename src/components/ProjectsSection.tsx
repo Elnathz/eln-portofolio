@@ -25,26 +25,29 @@ const gradients = [
 const projectsData: Project[] = [
   {
     id: "1",
-    title: "Bangkit Usaha UMKM Marketplace",
-    description: "Aplikasi mobile marketplace untuk UMKM dengan fitur lengkap berbasis Flutter.",
-    tags: ["Flutter", "Dart", "Mobile Development", "Firebase"],
-    image_url: "/projects/bangkitusaha.jpeg",
-    live_url: "",
-    github_url: "https://github.com/Elnathz/BangkitUsahaFlutter",
-  },
-  {
-    id: "2",
     title: "Clustering Gempa Indonesia",
-    description: "Clustering gempa di indonesia berdasarkan metode K-Means dengan visualisasi interaktif.",
+    description:
+      "Clustering gempa di indonesia berdasarkan metode K-Means dengan visualisasi interaktif.",
     tags: ["Jupyter Notebook", "K-Means", "Streamlit", "Python"],
     image_url: "/projects/clustering.png",
     live_url: "https://clusteringgempaindonesia.streamlit.app",
     github_url: "https://github.com/Elnathz/ClusteringGempa",
   },
   {
+    id: "2",
+    title: "Bangkit Usaha UMKM Marketplace",
+    description:
+      "Aplikasi mobile marketplace untuk UMKM dengan fitur lengkap berbasis Flutter.",
+    tags: ["Flutter", "Dart", "Mobile Development", "Firebase"],
+    image_url: "/projects/bangkitusaha.jpeg",
+    live_url: "",
+    github_url: "https://github.com/Elnathz/BangkitUsahaFlutter",
+  },
+  {
     id: "3",
     title: "Case Closed Web",
-    description: "Website Blog interaktif yang dibangun menggunakan framework Laravel dan MySQL.",
+    description:
+      "Website Blog interaktif yang dibangun menggunakan framework Laravel dan MySQL.",
     tags: ["Laravel", "MySQL", "PHP"],
     image_url: "/projects/webblog.png",
     live_url: "",
@@ -149,7 +152,7 @@ export default function ProjectsSection() {
                   <h3 className="mb-2 text-xl font-bold text-cream transition-colors group-hover:text-sage">
                     {project.title}
                   </h3>
-                  
+
                   {project.description && (
                     <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-cream/50">
                       {project.description}
@@ -247,7 +250,8 @@ export default function ProjectsSection() {
                         About The Project
                       </h3>
                       <p className="text-sm leading-relaxed text-cream/70 md:text-base">
-                        {selectedProject.description || "No description provided."}
+                        {selectedProject.description ||
+                          "No description provided."}
                       </p>
                     </div>
 

@@ -1,7 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, School, Gamepad2, Rocket, Music, Dumbbell } from "lucide-react";
+import {
+  GraduationCap,
+  School,
+  Gamepad2,
+  Rocket,
+  Music,
+  Dumbbell,
+} from "lucide-react";
 
 interface Education {
   id: number;
@@ -164,13 +171,32 @@ export default function EducationSection() {
                 {/* Paragraphs */}
                 <div className="space-y-4">
                   <p className="text-sm leading-relaxed text-cream/60 text-justify">
-                    Ketertarikan saya dengan dunia teknologi sudah dimulai sejak kecil — dari asyiknya bermain laptop sejak TK dan SD, hingga menyelami dunia gaming yang membuat saya penasaran: <span className="text-cream/80 font-medium">&ldquo;Bagaimana semua ini bisa dibuat?&rdquo;</span> Rasa penasaran itulah yang akhirnya membawa saya mendalami dunia IT secara serius.
+                    Dari kecil, aku emang udah suka banget sama dunia teknologi
+                    — mulai dari sering main laptop waktu TK dan SD, sampai
+                    akhirnya masuk ke dunia gaming yang bikin aku kepikiran:{" "}
+                    <span className="text-cream/80 font-medium">
+                      “Ini semua bikinnya gimana sih?”
+                    </span>{" "}
+                    Dari situ rasa penasaranku makin gede, dan akhirnya aku
+                    mutusin buat serius belajar IT.
                   </p>
                   <p className="text-sm leading-relaxed text-cream/60 text-justify">
-                    Saat ini, saya merupakan mahasiswa <span className="text-sage font-medium">Teknik Informatika kelas unggulan</span> di Universitas Dian Nuswantoro, dengan fokus pada pengembangan web dan ketertarikan kuat di bidang <span className="text-sage font-medium">Data Science</span>. Mimpi besar saya adalah membangun startup sendiri yang memiliki visi revolusioner di dunia AI — menciptakan teknologi yang benar-benar berdampak bagi banyak orang.
+                    Sekarang aku lagi kuliah di{" "}
+                    <span className="text-sage font-medium">
+                      Teknik Informatika kelas unggulan
+                    </span>{" "}
+                    di Universitas Dian Nuswantoro, dengan fokus di web
+                    development dan juga mulai dalemin{" "}
+                    <span className="text-sage font-medium">Data Science</span>.
+                    Targetku ke depan cukup jelas: pengen bangun startup sendiri
+                    di bidang AI yang beneran punya impact, bukan cuma sekadar
+                    keren doang.
                   </p>
                   <p className="text-sm leading-relaxed text-cream/60 text-justify">
-                    Di luar dunia coding, saya menikmati waktu dengan mendengarkan musik — terutama <span className="text-cream/80 font-medium">LANY</span> yang selalu menemani hari-hari saya. Saya juga aktif berolahraga: dari boxing, gym, hingga badminton, semua menjadi cara saya menjaga keseimbangan antara pikiran dan tubuh.
+                    Di luar coding, aku biasanya santai sambil dengerin musik —
+                    terutama LANY yang
+                    selalu nemenin. Selain itu, aku juga rutin olahraga, mulai
+                    dari boxing, gym, sampai badminton.
                   </p>
                 </div>
 
