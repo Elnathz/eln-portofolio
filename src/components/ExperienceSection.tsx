@@ -22,6 +22,8 @@ interface Experience {
   title: string;
   role: string;
   period: string;
+  credentialId?: string;
+  credentialUrl?: string;
   images: ExperienceImage[];
 }
 
@@ -32,10 +34,10 @@ const experienceData: Experience[] = [
     role: "Ketua 1 OSIS",
     period: "2022 - 2023",
     images: [
-      { src: "/experience/osis/1.jpg", caption: "Kegiatan rapat pengurus OSIS" },
-      { src: "/experience/osis/2.jpg", caption: "Kegiatan rapat pengurus OSIS" },
-      { src: "/experience/osis/3.JPG", caption: "Kegiatan rapat pengurus OSIS" },
-      { src: "/experience/osis/4.JPG", caption: "Kegiatan rapat pengurus OSIS" },
+      { src: "/experience/osis/1.webp", caption: "Pengurus Osis Masa Bakti 2022/2023" },
+      { src: "/experience/osis/2.webp", caption: "XTROFEST 62" },
+      { src: "/experience/osis/3.webp", caption: "Panitia Event 17 Agustus OSIS dan MPK " },
+      { src: "/experience/osis/4.webp", caption: "Event Latihan Dasar Kepemimpinan OSIS 2023" },
     ],
   },
   {
@@ -66,17 +68,17 @@ const experienceData: Experience[] = [
     role: "Anggota Bidang Litbang",
     period: "2024 - Sekarang",
     images: [
-      { src: "/experience/hmti/0.jpg", caption: "Feeds Pengurus HMTI 2025/2026" },
-      { src: "/experience/hmti/1.jpeg", caption: "Feeds Pengurus HMTI 2025/2026" },
-      { src: "/experience/hmti/2.jpeg", caption: "Pembekalan Calon Pengurus FIK 2025" },
-      { src: "/experience/hmti/3.jpeg", caption: "Pengurus HMTI day 2 Dinus Inside" },
-      { src: "/experience/hmti/4.jpeg", caption: "Day 1 Pembekalan Anggota Aktif Sebagai Koor Acara" },
-      { src: "/experience/hmti/5.jpeg", caption: "Day 2 Pembekalan Anggota Aktif Sebagai Koor Acara" },
-      { src: "/experience/hmti/6.jpeg", caption: "Panitia KonekTI 2025(Makrab Prodi Teknik Informatika)" },
-      { src: "/experience/hmti/7.jpeg", caption: "Master of Ceremony SEMNASTI(Seminar Nasional Teknik Informatika) 2025" },
-      { src: "/experience/hmti/8.jpeg", caption: "Koor Acara ITC(IT Competition) 2026" },
-      { src: "/experience/hmti/9.jpeg", caption: "Makrab HMTI(HMTI FAMILY) 2025" },
-      { src: "/experience/hmti/10.jpg", caption: "Badan Pengurus Harian (Sekretaris) HMTI SERIES 2026" },
+      { src: "/experience/hmti/0.webp", caption: "Feeds Pengurus HMTI 2025/2026" },
+      { src: "/experience/hmti/1.webp", caption: "Feeds Pengurus HMTI 2025/2026" },
+      { src: "/experience/hmti/2.webp", caption: "Pembekalan Calon Pengurus FIK 2025" },
+      { src: "/experience/hmti/3.webp", caption: "Pengurus HMTI day 2 Dinus Inside" },
+      { src: "/experience/hmti/4.webp", caption: "Day 1 Pembekalan Anggota Aktif Sebagai Koor Acara" },
+      { src: "/experience/hmti/5.webp", caption: "Day 2 Pembekalan Anggota Aktif Sebagai Koor Acara" },
+      { src: "/experience/hmti/6.webp", caption: "Panitia KonekTI 2025(Makrab Prodi Teknik Informatika)" },
+      { src: "/experience/hmti/7.webp", caption: "Master of Ceremony SEMNASTI(Seminar Nasional Teknik Informatika) 2025" },
+      { src: "/experience/hmti/8.webp", caption: "Koor Acara ITC(IT Competition) 2026" },
+      { src: "/experience/hmti/9.webp", caption: "Makrab HMTI(HMTI FAMILY) 2025" },
+      { src: "/experience/hmti/10.webp", caption: "Badan Pengurus Harian (Sekretaris) HMTI SERIES 2026" },
     ],
   },
   {
@@ -95,13 +97,65 @@ const experienceData: Experience[] = [
     role: "Penanggung Jawab Pendamping dan Koorlap",
     period: "2025",
     images: [
-      { src: "/experience/dinusinside/1.jpg", caption: "Feeds Sie Penanggung Jawab Pendamping Dinus Inside 2026", links: [{ label: "Instagram Dinus Inside", url: "https://www.instagram.com/p/DOSspx5E4Li/", icon: "external" }] },
-      { src: "/experience/dinusinside/2.jpeg", caption: "After Gladi Resik Dinus Inside 2026"},
-      { src: "/experience/dinusinside/3.jpeg", caption: "Day 1 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
-      { src: "/experience/dinusinside/4.jpeg", caption: "Day 1 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
-      { src: "/experience/dinusinside/5.jpeg", caption: "Day 2 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
-      { src: "/experience/dinusinside/6.jpeg", caption: "Day 2 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
-      { src: "/experience/dinusinside/7.jpeg", caption: "Day 3 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
+      { src: "/experience/dinusinside/1.webp", caption: "Feeds Sie Penanggung Jawab Pendamping Dinus Inside 2026", links: [{ label: "Instagram Dinus Inside", url: "https://www.instagram.com/p/DOSspx5E4Li/", icon: "external" }] },
+      { src: "/experience/dinusinside/2.webp", caption: "After Gladi Resik Dinus Inside 2026"},
+      { src: "/experience/dinusinside/3.webp", caption: "Day 1 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
+      { src: "/experience/dinusinside/4.webp", caption: "Day 1 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
+      { src: "/experience/dinusinside/5.webp", caption: "Day 2 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
+      { src: "/experience/dinusinside/6.webp", caption: "Day 2 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
+      { src: "/experience/dinusinside/7.webp", caption: "Day 3 Dinus Inside 2026 Sebagai Koor Lapangan dan Penanggung Jawab Pendamping"},
+    ],
+  },
+];
+
+const certificateData: Experience[] = [
+  {
+    id: 101,
+    title: "IBM Machine Learning Professional Certificate",
+    role: "Sertifikat Profesional",
+    period: "2024",
+    credentialId: "OCZC6P8P49CH",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/specialization/OCZC6P8P49CH",
+    images: [
+      { src: "/certificates/coursera.webp", caption: "Sertifikat IBM" },
+    ],
+  },
+  {
+    id: 102,
+    title: "WPU Course Belajar Laravel",
+    role: "Sertifikat Pelatihan",
+    period: "2024",
+    credentialId: "HMVL5T23",
+    credentialUrl: "https://learn.wpucourse.id/certificate/HMVL5T23",
+    images: [
+      { src: "/certificates/wpucourse.webp", caption: "WPU Course Belajar Laravel" },
+    ],
+  },
+  {
+    id: 103,
+    title: "Juara 2 Assignment BTNG DNCC 2024",
+    role: "Piagam Penghargaan",
+    period: "2024",
+    images: [
+      { src: "/certificates/btng.webp", caption: "Piagam Juara 2 Assignment BTNG DNCC 2024" },
+    ],
+  },
+  {
+    id: 104,
+    title: "Sertifikat Panitia Dinus Inside 2025",
+    role: "Sertifikat Kepanitiaan",
+    period: "2025",
+    images: [
+      { src: "/certificates/dinusinside.webp", caption: "Sertifikat Panitia Dinus Inside 2025" },
+    ],
+  },
+  {
+    id: 105,
+    title: "Piagam Pengurus OSIS",
+    role: "Piagam Penghargaan",
+    period: "2023",
+    images: [
+      { src: "/certificates/osis.webp", caption: "Piagam Pengurus OSIS" },
     ],
   },
 ];
@@ -188,6 +242,24 @@ function ExperienceCard({
           <p className="mt-0.5 text-xs text-cream/50">
             {experience.role} &middot; &middot; {experience.period}
           </p>
+          {(experience.credentialId || experience.credentialUrl) && (
+            <div className="mt-1 flex items-center">
+              {experience.credentialUrl ? (
+                <a 
+                  href={experience.credentialUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  onClick={(e) => e.stopPropagation()}
+                  className="relative z-10 inline-flex items-center gap-1 font-mono text-[10px] text-sage hover:text-sage-light hover:underline"
+                >
+                  {experience.credentialId ? `Credential ID: ${experience.credentialId}` : 'Lihat Sertifikat'}
+                  <ExternalLink size={10} />
+                </a>
+              ) : (
+                <span className="font-mono text-[10px] text-cream/40">Credential ID: {experience.credentialId}</span>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </motion.div>
@@ -266,9 +338,28 @@ function PhotoModal({
         <div className="flex items-center justify-between border-b border-dark-border px-6 py-4">
           <div>
             <h3 className="text-lg font-bold text-cream">{experience.title}</h3>
-            <p className="text-xs text-cream/50">
-              {experience.role} &middot; {experience.period}
-            </p>
+            <div className="mt-1 flex flex-col gap-1 text-xs text-cream/50">
+              <span>{experience.role} &middot; {experience.period}</span>
+              {(experience.credentialId || experience.credentialUrl) && (
+                <div className="flex items-center">
+                  {experience.credentialUrl ? (
+                    <a 
+                      href={experience.credentialUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex w-fit items-center gap-1 rounded bg-sage/10 px-2 py-0.5 font-mono text-[10px] text-sage transition-colors hover:bg-sage/20 hover:text-sage-light"
+                    >
+                      {experience.credentialId ? `Credential ID: ${experience.credentialId}` : 'Lihat Sertifikat'}
+                      <ExternalLink size={10} />
+                    </a>
+                  ) : (
+                    <span className="w-fit rounded bg-dark-border/50 px-2 py-0.5 font-mono text-[10px] text-cream/70">
+                      Credential ID: {experience.credentialId}
+                    </span>
+                  )}
+                </div>
+                )}
+            </div>
           </div>
           <button
             onClick={onClose}
@@ -382,12 +473,40 @@ export default function ExperienceSection() {
             </p>
           </motion.div>
 
-          {/* 6-Card Grid */}
+          {/* Experience Grid */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {experienceData.map((exp, i) => (
               <ExperienceCard
                 key={exp.id}
                 experience={exp}
+                index={i}
+                onOpen={setSelectedExp}
+              />
+            ))}
+          </div>
+
+          {/* Certificates Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 mt-24 text-center"
+          >
+            <span className="mb-3 inline-block text-sm font-medium uppercase tracking-widest text-sage">
+              Licenses & Certifications
+            </span>
+            <h2 className="text-3xl font-bold text-cream md:text-4xl">
+              My <span className="gradient-text">Certificates</span>
+            </h2>
+          </motion.div>
+
+          {/* Certificates Grid */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {certificateData.map((cert, i) => (
+              <ExperienceCard
+                key={cert.id}
+                experience={cert}
                 index={i}
                 onOpen={setSelectedExp}
               />
