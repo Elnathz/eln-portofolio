@@ -27,7 +27,7 @@ const projectsData: Project[] = [
     id: "1",
     title: "MegaMart E-Commerce",
     description:
-      "Aplikasi mobile marketplace untuk UMKM dengan fitur lengkap berbasis Flutter.",
+      "Platform marketplace e-commerce berbasis VILT Stack (Vue 3, Inertia.js, Laravel 12, Tailwind CSS) dengan fitur checkout lengkap, flash sale, sistem retur, manajemen pesanan, dan dashboard admin berbasis data.",
     tags: ["Vue.js", "Laravel", "Web Development", "MySQL"],
     image_url: "/projects/megamart.png",
     live_url: "",
