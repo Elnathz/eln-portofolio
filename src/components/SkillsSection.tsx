@@ -8,13 +8,13 @@ const skills = [
     icon: Monitor,
     title: "Web Development",
     description:
-      "Creating modern, responsive web applications with React, Next.js, and modern tooling.",
+      "Creating modern, responsive web applications with Laravel, ReactJS, Vue.js, and other modern tooling.",
   },
   {
     icon: Code2,
     title: "AI & Machine Learning",
     description:
-      "Currently learning data science, model training, and AI integration into apps.",
+      "Developing AI solutions focusing on Natural Language Processing (NLP) and Large Language Models (LLM) integration into applications.",
   },
 ];
 
