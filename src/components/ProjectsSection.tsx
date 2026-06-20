@@ -29,7 +29,7 @@ const projectsData: Project[] = [
     description:
       "Aplikasi mobile marketplace untuk UMKM dengan fitur lengkap berbasis Flutter.",
     tags: ["Vue.js", "Laravel", "Web Development", "MySQL"],
-    image_url: "/projects/megamart.jpg",
+    image_url: "/projects/megamart.png",
     live_url: "",
     github_url: "https://github.com/Elnathz/e-commerce",
   },
