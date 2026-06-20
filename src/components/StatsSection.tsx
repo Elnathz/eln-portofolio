@@ -4,8 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 const stats = [
-  { value: 2, suffix: "+", label: "Years Experience" },
-  { value: 3, suffix: "+", label: "Projects Done" },
+  { value: 0, suffix: "+", label: "Years Experience" },
+  { value: 4, suffix: "+", label: "Projects Done" },
 ];
 
 function AnimatedCounter({

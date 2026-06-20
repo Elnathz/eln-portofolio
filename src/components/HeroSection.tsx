@@ -37,7 +37,7 @@ export default function HeroSection() {
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sage/20 bg-sage/5 px-4 py-1.5">
             <span className="h-2 w-2 rounded-full bg-sage animate-pulse" />
             <span className="text-xs font-medium text-sage">
-            Currently Learning Data Science Focusing on NLP  
+            Currently Focusing on Developing E-Commerce   
             </span>
           </div>
 
@@ -45,8 +45,16 @@ export default function HeroSection() {
             I am{" "}
             <span className="gradient-text">Farros</span> Rifantiarno Ramadhani
           </h1>
-          <p className="mb-8 text-base leading-relaxed text-cream/50 md:text-lg">
-            An Informatics Engineering student in the Excellent Class program, focusing on Full Stack Development with a keen interest in Data Science.
+          <p className="mb-8 text-base leading-relaxed text-cream/60 md:text-lg">
+            Informatics Engineering student, building impactful solutions across{" "}
+            <span className="font-medium text-cream/90 underline decoration-sage/40 underline-offset-4">
+              Full Stack Development
+            </span>
+            {" "}with a growing passion for{" "}
+            <span className="font-medium text-cream/90 underline decoration-sage/40 underline-offset-4">
+              Data Science
+            </span>
+            .
           </p>
 
           {/* CTA Buttons */}
@@ -62,7 +70,7 @@ export default function HeroSection() {
               />
             </a>
             <a
-              href="https://drive.google.com/file/d/1MvwzCmwIoXpDuGB6tas0mz8vZoiz4mi5/view?usp=sharing" target="_blank"
+              href="https://drive.google.com/file/d/1TDfI2iro8pqYln5Ncd8NvVxYJd-aymvR/view?usp=sharing" target="_blank"
               className="flex items-center gap-2 rounded-full border border-sage/30 px-7 py-3 text-sm font-semibold text-sage transition-all duration-300 hover:bg-sage/10"
             >
               <Download size={16} />

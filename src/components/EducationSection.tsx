@@ -181,20 +181,29 @@ export default function EducationSection() {
                     mutusin buat serius belajar IT.
                   </p>
                   <p className="text-sm leading-relaxed text-cream/60 text-justify">
-                    Sekarang aku lagi kuliah di{" "}
-                    <span className="text-sage font-medium">
-                      Teknik Informatika kelas unggulan
+                    Sekarang aku lagi kuliah{" "}
+                    <span className="font-medium text-cream/80">
+                      Teknik Informatika
                     </span>{" "}
-                    di Universitas Dian Nuswantoro, dengan fokus di web
-                    development dan juga mulai dalemin{" "}
-                    <span className="text-sage font-medium">Data Science</span>.
-                    Targetku ke depan cukup jelas: pengen bangun startup sendiri
+                    di{" "}
+                    <span className="font-medium text-sage">
+                      Universitas Dian Nuswantoro
+                    </span>
+                    , fokus ngebangun hal-hal nyata di dunia{" "}
+                    <span className="font-medium text-cream/80 underline decoration-sage/40 underline-offset-2">
+                      web development
+                    </span>{" "}
+                    sambil mulai dalemin{" "}
+                    <span className="font-medium text-cream/80 underline decoration-sage/40 underline-offset-2">
+                      Data Science
+                    </span>
+                    . Targetku ke depan cukup jelas: pengen bangun startup sendiri
                     di bidang AI yang beneran punya impact, bukan cuma sekadar
                     keren doang.
                   </p>
                   <p className="text-sm leading-relaxed text-cream/60 text-justify">
-                    Di luar coding, aku biasanya santai sambil dengerin musik —
-                    terutama LANY yang
+                    Di luar coding, aku biasanya santai sambil dengerin musik 
+                    terutama Hindia, The Weekend, dan Niki yang
                     selalu nemenin. Selain itu, aku juga rutin olahraga, mulai
                     dari boxing, gym, sampai badminton.
                   </p>

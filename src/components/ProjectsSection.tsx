@@ -25,13 +25,13 @@ const gradients = [
 const projectsData: Project[] = [
   {
     id: "1",
-    title: "Clustering Gempa Indonesia",
+    title: "MegaMart E-Commerce",
     description:
-      "Clustering gempa di indonesia berdasarkan metode K-Means dengan visualisasi interaktif.",
-    tags: ["Jupyter Notebook", "K-Means", "Streamlit", "Python"],
-    image_url: "/projects/clustering.png",
-    live_url: "https://clusteringgempaindonesia.streamlit.app",
-    github_url: "https://github.com/Elnathz/ClusteringGempa",
+      "Aplikasi mobile marketplace untuk UMKM dengan fitur lengkap berbasis Flutter.",
+    tags: ["Vue.js", "Laravel", "Web Development", "MySQL"],
+    image_url: "/projects/megamart.jpg",
+    live_url: "",
+    github_url: "https://github.com/Elnathz/e-commerce",
   },
   {
     id: "2",
@@ -45,6 +45,16 @@ const projectsData: Project[] = [
   },
   {
     id: "3",
+    title: "Clustering Gempa Indonesia",
+    description:
+      "Clustering gempa di indonesia berdasarkan metode K-Means dengan visualisasi interaktif.",
+    tags: ["Jupyter Notebook", "K-Means", "Streamlit", "Python"],
+    image_url: "/projects/clustering.png",
+    live_url: "https://clusteringgempaindonesia.streamlit.app",
+    github_url: "https://github.com/Elnathz/ClusteringGempa",
+  },
+  {
+    id: "4",
     title: "Case Closed Web",
     description:
       "Website Blog interaktif yang dibangun menggunakan framework Laravel dan MySQL.",

@@ -66,7 +66,7 @@ const experienceData: Experience[] = [
     id: 4,
     title: "Himpunan Mahasiswa Teknik Informatika",
     role: "Anggota Bidang Litbang",
-    period: "2024 - Sekarang",
+    period: "2024 - 2026",
     images: [
       { src: "/experience/hmti/0.webp", caption: "Feeds Pengurus HMTI 2025/2026" },
       { src: "/experience/hmti/1.webp", caption: "Feeds Pengurus HMTI 2025/2026" },
