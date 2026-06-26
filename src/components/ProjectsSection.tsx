@@ -25,16 +25,26 @@ const gradients = [
 const projectsData: Project[] = [
   {
     id: "1",
+    title: "Seapedia",
+    description:
+      "Platform marketplace untuk mahasiswa.",
+    tags: ["Vue.js", "TypeScript", "Laravel", "Web Development", "MySQL", "Docker"],
+    image_url: "/projects/seapedia.png",
+    live_url: "https://seapedia.web.id",
+    github_url: "https://github.com/Elnathz/seapedia",
+  },
+  {
+    id: "2",
     title: "MegaMart E-Commerce",
     description:
       "Platform marketplace e-commerce berbasis VILT Stack (Vue 3, Inertia.js, Laravel 12, Tailwind CSS) dengan fitur checkout lengkap, flash sale, sistem retur, manajemen pesanan, dan dashboard admin berbasis data.",
-    tags: ["Vue.js", "Laravel", "Web Development", "MySQL"],
+    tags: ["Vue.js", "Laravel", "Web Development", "MySQL", "Docker"],
     image_url: "/projects/megamart.png",
     live_url: "",
     github_url: "https://github.com/Elnathz/e-commerce",
   },
   {
-    id: "2",
+    id: "3",
     title: "Bangkit Usaha UMKM Marketplace",
     description:
       "Aplikasi mobile marketplace untuk UMKM dengan fitur lengkap berbasis Flutter.",
@@ -44,7 +54,7 @@ const projectsData: Project[] = [
     github_url: "https://github.com/Elnathz/BangkitUsahaFlutter",
   },
   {
-    id: "3",
+    id: "4",
     title: "Clustering Gempa Indonesia",
     description:
       "Clustering gempa di indonesia berdasarkan metode K-Means dengan visualisasi interaktif.",
@@ -54,7 +64,7 @@ const projectsData: Project[] = [
     github_url: "https://github.com/Elnathz/ClusteringGempa",
   },
   {
-    id: "4",
+    id: "5",
     title: "Case Closed Web",
     description:
       "Website Blog interaktif yang dibangun menggunakan framework Laravel dan MySQL.",
